@@ -1,0 +1,263 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-participant-entry-heading" jhiTranslate="trainingApplicationApp.participantEntry.home.createOrEditLabel">Create or edit a Participant Entry</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.individualCode" for="field_individualCode" [ngbTooltip]="'trainingApplicationApp.participantEntry.help.individualCode' | translate">Individual Code</label>
+                    <input type="text" class="form-control" name="individualCode" id="field_individualCode"
+                           formControlName="individualCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.firstName" for="field_firstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" id="field_firstName"
+                           formControlName="firstName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.lastName" for="field_lastName">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" id="field_lastName"
+                           formControlName="lastName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.country" for="field_country">Country</label>
+                    <select class="form-control" name="country" formControlName="country" id="field_country">
+                        <option value="ANTARTICA">{{'trainingApplicationApp.Country.ANTARTICA' | translate}}</option>
+                        <option value="AMERICAN_SAMOA">{{'trainingApplicationApp.Country.AMERICAN_SAMOA' | translate}}</option>
+                        <option value="AUSTRALIA">{{'trainingApplicationApp.Country.AUSTRALIA' | translate}}</option>
+                        <option value="BELGIUM">{{'trainingApplicationApp.Country.BELGIUM' | translate}}</option>
+                        <option value="BRAZIL">{{'trainingApplicationApp.Country.BRAZIL' | translate}}</option>
+                        <option value="CANADA">{{'trainingApplicationApp.Country.CANADA' | translate}}</option>
+                        <option value="SWITZERLAND">{{'trainingApplicationApp.Country.SWITZERLAND' | translate}}</option>
+                        <option value="COOK_ISLANDS">{{'trainingApplicationApp.Country.COOK_ISLANDS' | translate}}</option>
+                        <option value="CHINA">{{'trainingApplicationApp.Country.CHINA' | translate}}</option>
+                        <option value="CUBA">{{'trainingApplicationApp.Country.CUBA' | translate}}</option>
+                        <option value="GERMANY">{{'trainingApplicationApp.Country.GERMANY' | translate}}</option>
+                        <option value="DENMARK">{{'trainingApplicationApp.Country.DENMARK' | translate}}</option>
+                        <option value="SPAIN">{{'trainingApplicationApp.Country.SPAIN' | translate}}</option>
+                        <option value="FIJI_ISLANDS">{{'trainingApplicationApp.Country.FIJI_ISLANDS' | translate}}</option>
+                        <option value="FEDERATED_STATES_OF_MICRONESIA">{{'trainingApplicationApp.Country.FEDERATED_STATES_OF_MICRONESIA' | translate}}</option>
+                        <option value="FRANCE">{{'trainingApplicationApp.Country.FRANCE' | translate}}</option>
+                        <option value="GUAM">{{'trainingApplicationApp.Country.GUAM' | translate}}</option>
+                        <option value="GREECE">{{'trainingApplicationApp.Country.GREECE' | translate}}</option>
+                        <option value="HONG_KONG">{{'trainingApplicationApp.Country.HONG_KONG' | translate}}</option>
+                        <option value="INDONESIA">{{'trainingApplicationApp.Country.INDONESIA' | translate}}</option>
+                        <option value="IRELAND">{{'trainingApplicationApp.Country.IRELAND' | translate}}</option>
+                        <option value="ISRAEL">{{'trainingApplicationApp.Country.ISRAEL' | translate}}</option>
+                        <option value="INDIA">{{'trainingApplicationApp.Country.INDIA' | translate}}</option>
+                        <option value="ITALY">{{'trainingApplicationApp.Country.ITALY' | translate}}</option>
+                        <option value="JAMAICA">{{'trainingApplicationApp.Country.JAMAICA' | translate}}</option>
+                        <option value="JAPAN">{{'trainingApplicationApp.Country.JAPAN' | translate}}</option>
+                        <option value="KENYA">{{'trainingApplicationApp.Country.KENYA' | translate}}</option>
+                        <option value="KIRIBATI">{{'trainingApplicationApp.Country.KIRIBATI' | translate}}</option>
+                        <option value="NORTH_KOREA">{{'trainingApplicationApp.Country.NORTH_KOREA' | translate}}</option>
+                        <option value="SOUTH_KOREA">{{'trainingApplicationApp.Country.SOUTH_KOREA' | translate}}</option>
+                        <option value="MARSHALL_ISLANDS">{{'trainingApplicationApp.Country.MARSHALL_ISLANDS' | translate}}</option>
+                        <option value="NORTHERN_MARIANA_ISLANDS">{{'trainingApplicationApp.Country.NORTHERN_MARIANA_ISLANDS' | translate}}</option>
+                        <option value="MALTA">{{'trainingApplicationApp.Country.MALTA' | translate}}</option>
+                        <option value="MAURITIUS">{{'trainingApplicationApp.Country.MAURITIUS' | translate}}</option>
+                        <option value="MALDIVES">{{'trainingApplicationApp.Country.MALDIVES' | translate}}</option>
+                        <option value="MALAYSIA">{{'trainingApplicationApp.Country.MALAYSIA' | translate}}</option>
+                        <option value="NEW_CALEDONIA">{{'trainingApplicationApp.Country.NEW_CALEDONIA' | translate}}</option>
+                        <option value="NORFOLK_ISLANDS">{{'trainingApplicationApp.Country.NORFOLK_ISLANDS' | translate}}</option>
+                        <option value="NETHERLANDS">{{'trainingApplicationApp.Country.NETHERLANDS' | translate}}</option>
+                        <option value="NORWAY">{{'trainingApplicationApp.Country.NORWAY' | translate}}</option>
+                        <option value="NAURU">{{'trainingApplicationApp.Country.NAURU' | translate}}</option>
+                        <option value="NIUE">{{'trainingApplicationApp.Country.NIUE' | translate}}</option>
+                        <option value="NEW_ZEALAND">{{'trainingApplicationApp.Country.NEW_ZEALAND' | translate}}</option>
+                        <option value="FRENCH_POLYNESIA">{{'trainingApplicationApp.Country.FRENCH_POLYNESIA' | translate}}</option>
+                        <option value="PAPUA_NEWGUINEA">{{'trainingApplicationApp.Country.PAPUA_NEWGUINEA' | translate}}</option>
+                        <option value="PHILIPPINES">{{'trainingApplicationApp.Country.PHILIPPINES' | translate}}</option>
+                        <option value="PACIFIC_REGION">{{'trainingApplicationApp.Country.PACIFIC_REGION' | translate}}</option>
+                        <option value="PUERTO_RICO">{{'trainingApplicationApp.Country.PUERTO_RICO' | translate}}</option>
+                        <option value="PALAU">{{'trainingApplicationApp.Country.PALAU' | translate}}</option>
+                        <option value="ALL_SOPAC_MEMBER_COUNTRIES">{{'trainingApplicationApp.Country.ALL_SOPAC_MEMBER_COUNTRIES' | translate}}</option>
+                        <option value="RUSSIAN_FEDERATION">{{'trainingApplicationApp.Country.RUSSIAN_FEDERATION' | translate}}</option>
+                        <option value="SOLOMON_ISLANDS">{{'trainingApplicationApp.Country.SOLOMON_ISLANDS' | translate}}</option>
+                        <option value="SEYCHELLES">{{'trainingApplicationApp.Country.SEYCHELLES' | translate}}</option>
+                        <option value="SWEDEN">{{'trainingApplicationApp.Country.SWEDEN' | translate}}</option>
+                        <option value="SINGAPORE">{{'trainingApplicationApp.Country.SINGAPORE' | translate}}</option>
+                        <option value="USSR">{{'trainingApplicationApp.Country.USSR' | translate}}</option>
+                        <option value="THAILAND">{{'trainingApplicationApp.Country.THAILAND' | translate}}</option>
+                        <option value="TOKELAU">{{'trainingApplicationApp.Country.TOKELAU' | translate}}</option>
+                        <option value="TONGA">{{'trainingApplicationApp.Country.TONGA' | translate}}</option>
+                        <option value="TRINIDAD_AND_TOBAGO">{{'trainingApplicationApp.Country.TRINIDAD_AND_TOBAGO' | translate}}</option>
+                        <option value="TUVALU">{{'trainingApplicationApp.Country.TUVALU' | translate}}</option>
+                        <option value="TAIWAN">{{'trainingApplicationApp.Country.TAIWAN' | translate}}</option>
+                        <option value="UNITED_KINGDOM">{{'trainingApplicationApp.Country.UNITED_KINGDOM' | translate}}</option>
+                        <option value="UNITED_STATES_OF_AMERICA">{{'trainingApplicationApp.Country.UNITED_STATES_OF_AMERICA' | translate}}</option>
+                        <option value="VANUATU">{{'trainingApplicationApp.Country.VANUATU' | translate}}</option>
+                        <option value="WALLIS_AND_FUTUNA">{{'trainingApplicationApp.Country.WALLIS_AND_FUTUNA' | translate}}</option>
+                        <option value="WORLD">{{'trainingApplicationApp.Country.WORLD' | translate}}</option>
+                        <option value="SAMOA">{{'trainingApplicationApp.Country.SAMOA' | translate}}</option>
+                        <option value="SOUTH_AFRICA">{{'trainingApplicationApp.Country.SOUTH_AFRICA' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.gender" for="field_gender">Gender</label>
+                    <select class="form-control" name="gender" formControlName="gender" id="field_gender">
+                        <option value="MALE">{{'trainingApplicationApp.Gender.MALE' | translate}}</option>
+                        <option value="FEMALE">{{'trainingApplicationApp.Gender.FEMALE' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.title" for="field_title">Title</label>
+                    <select class="form-control" name="title" formControlName="title" id="field_title">
+                        <option value="MR">{{'trainingApplicationApp.Title.MR' | translate}}</option>
+                        <option value="MRS">{{'trainingApplicationApp.Title.MRS' | translate}}</option>
+                        <option value="DR">{{'trainingApplicationApp.Title.DR' | translate}}</option>
+                        <option value="HON">{{'trainingApplicationApp.Title.HON' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.dateOfBirth" for="field_dateOfBirth">Date Of Birth</label>
+                    <div class="input-group">
+                        <input id="field_dateOfBirth" type="text" class="form-control" name="dateOfBirth" ngbDatepicker  #dateOfBirthDp="ngbDatepicker" formControlName="dateOfBirth"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateOfBirthDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.organization" for="field_organization">Organization</label>
+                    <input type="text" class="form-control" name="organization" id="field_organization"
+                           formControlName="organization"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.sector" for="field_sector">Sector</label>
+                    <select class="form-control" name="sector" formControlName="sector" id="field_sector">
+                        <option value="CIVIL_SERVICE">{{'trainingApplicationApp.Sector.CIVIL_SERVICE' | translate}}</option>
+                        <option value="INTERNATIONAL_ORGANIZATION">{{'trainingApplicationApp.Sector.INTERNATIONAL_ORGANIZATION' | translate}}</option>
+                        <option value="NATIONAL_GOVERNMENT">{{'trainingApplicationApp.Sector.NATIONAL_GOVERNMENT' | translate}}</option>
+                        <option value="PRIVATE_SECTOR">{{'trainingApplicationApp.Sector.PRIVATE_SECTOR' | translate}}</option>
+                        <option value="REGIONAL_ORGANIZATION">{{'trainingApplicationApp.Sector.REGIONAL_ORGANIZATION' | translate}}</option>
+                        <option value="OTHERS">{{'trainingApplicationApp.Sector.OTHERS' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.position" for="field_position">Position</label>
+                    <input type="text" class="form-control" name="position" id="field_position"
+                           formControlName="position"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.contactAddress" for="field_contactAddress">Contact Address</label>
+                    <input type="text" class="form-control" name="contactAddress" id="field_contactAddress"
+                           formControlName="contactAddress"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.workPhone" for="field_workPhone">Work Phone</label>
+                    <input type="number" class="form-control" name="workPhone" id="field_workPhone"
+                           formControlName="workPhone"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.faxNumber" for="field_faxNumber">Fax Number</label>
+                    <input type="number" class="form-control" name="faxNumber" id="field_faxNumber"
+                           formControlName="faxNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.homePhone" for="field_homePhone">Home Phone</label>
+                    <input type="number" class="form-control" name="homePhone" id="field_homePhone"
+                           formControlName="homePhone"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.previousEmployment" for="field_previousEmployment">Previous Employment</label>
+                    <input type="text" class="form-control" name="previousEmployment" id="field_previousEmployment"
+                           formControlName="previousEmployment"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.specialGeneral" for="field_specialGeneral">Special General</label>
+                    <select class="form-control" name="specialGeneral" formControlName="specialGeneral" id="field_specialGeneral">
+                        <option value="ADMINISTRATION">{{'trainingApplicationApp.Specialgeneral.ADMINISTRATION' | translate}}</option>
+                        <option value="AGRICULTURE">{{'trainingApplicationApp.Specialgeneral.AGRICULTURE' | translate}}</option>
+                        <option value="ARCHITECTURE">{{'trainingApplicationApp.Specialgeneral.ARCHITECTURE' | translate}}</option>
+                        <option value="BROADCASTING_OR_MEDIA">{{'trainingApplicationApp.Specialgeneral.BROADCASTING_OR_MEDIA' | translate}}</option>
+                        <option value="COMMUNICATIONS">{{'trainingApplicationApp.Specialgeneral.COMMUNICATIONS' | translate}}</option>
+                        <option value="COMMUNITY_DEVELOPMENT">{{'trainingApplicationApp.Specialgeneral.COMMUNITY_DEVELOPMENT' | translate}}</option>
+                        <option value="DEFENSE">{{'trainingApplicationApp.Specialgeneral.DEFENSE' | translate}}</option>
+                        <option value="DISASTER_MANAGEMENT">{{'trainingApplicationApp.Specialgeneral.DISASTER_MANAGEMENT' | translate}}</option>
+                        <option value="ECONOMICS">{{'trainingApplicationApp.Specialgeneral.ECONOMICS' | translate}}</option>
+                        <option value="EDUCATION_AND_TRAINING_AND_PUBLIC_AWARENESS">{{'trainingApplicationApp.Specialgeneral.EDUCATION_AND_TRAINING_AND_PUBLIC_AWARENESS' | translate}}</option>
+                        <option value="ELECTIRCIAN">{{'trainingApplicationApp.Specialgeneral.ELECTIRCIAN' | translate}}</option>
+                        <option value="FINANCE">{{'trainingApplicationApp.Specialgeneral.FINANCE' | translate}}</option>
+                        <option value="FIRE_AND_SEARCH_AND_RESCUE">{{'trainingApplicationApp.Specialgeneral.FIRE_AND_SEARCH_AND_RESCUE' | translate}}</option>
+                        <option value="FIRST_AID_INSTRUCTOR">{{'trainingApplicationApp.Specialgeneral.FIRST_AID_INSTRUCTOR' | translate}}</option>
+                        <option value="FOREIGN_AFFAIRS">{{'trainingApplicationApp.Specialgeneral.FOREIGN_AFFAIRS' | translate}}</option>
+                        <option value="HEALTH_EDUCATION">{{'trainingApplicationApp.Specialgeneral.HEALTH_EDUCATION' | translate}}</option>
+                        <option value="LAND_VALUATION">{{'trainingApplicationApp.Specialgeneral.LAND_VALUATION' | translate}}</option>
+                        <option value="MANAGEMENT">{{'trainingApplicationApp.Specialgeneral.MANAGEMENT' | translate}}</option>
+                        <option value="MARITIME">{{'trainingApplicationApp.Specialgeneral.MARITIME' | translate}}</option>
+                        <option value="MEDICAL_METEREOLOGICAL_SERVICES">{{'trainingApplicationApp.Specialgeneral.MEDICAL_METEREOLOGICAL_SERVICES' | translate}}</option>
+                        <option value="MINERAL_RESOURCES">{{'trainingApplicationApp.Specialgeneral.MINERAL_RESOURCES' | translate}}</option>
+                        <option value="NATIONAL_PLANNING">{{'trainingApplicationApp.Specialgeneral.NATIONAL_PLANNING' | translate}}</option>
+                        <option value="POLICE">{{'trainingApplicationApp.Specialgeneral.POLICE' | translate}}</option>
+                        <option value="PRISON_SERVICES">{{'trainingApplicationApp.Specialgeneral.PRISON_SERVICES' | translate}}</option>
+                        <option value="PUBLIC_HEALTH">{{'trainingApplicationApp.Specialgeneral.PUBLIC_HEALTH' | translate}}</option>
+                        <option value="PUBLIC_WORK_AND_WATER">{{'trainingApplicationApp.Specialgeneral.PUBLIC_WORK_AND_WATER' | translate}}</option>
+                        <option value="RED_CROSS">{{'trainingApplicationApp.Specialgeneral.RED_CROSS' | translate}}</option>
+                        <option value="RESEARCH_DEPARTMENT">{{'trainingApplicationApp.Specialgeneral.RESEARCH_DEPARTMENT' | translate}}</option>
+                        <option value="TRANSPORT">{{'trainingApplicationApp.Specialgeneral.TRANSPORT' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.specialDisasterManagement" for="field_specialDisasterManagement">Special Disaster Management</label>
+                    <select class="form-control" name="specialDisasterManagement" formControlName="specialDisasterManagement" id="field_specialDisasterManagement">
+                        <option value="COORDINATION">{{'trainingApplicationApp.Specialdisastermanagement.COORDINATION' | translate}}</option>
+                        <option value="DAMAGE_ASSEMENT_AND_PLANNING">{{'trainingApplicationApp.Specialdisastermanagement.DAMAGE_ASSEMENT_AND_PLANNING' | translate}}</option>
+                        <option value="DISASTER_OPERATION">{{'trainingApplicationApp.Specialdisastermanagement.DISASTER_OPERATION' | translate}}</option>
+                        <option value="EDUCATION_AND_TRAINING">{{'trainingApplicationApp.Specialdisastermanagement.EDUCATION_AND_TRAINING' | translate}}</option>
+                        <option value="HAZARD_ASSEMENT">{{'trainingApplicationApp.Specialdisastermanagement.HAZARD_ASSEMENT' | translate}}</option>
+                        <option value="MITIGATION_AND_PREVENTION">{{'trainingApplicationApp.Specialdisastermanagement.MITIGATION_AND_PREVENTION' | translate}}</option>
+                        <option value="NEEDS_ANALYSIS_AND_IMPLEMENTATION">{{'trainingApplicationApp.Specialdisastermanagement.NEEDS_ANALYSIS_AND_IMPLEMENTATION' | translate}}</option>
+                        <option value="PREPAREDNESS_PLANNING">{{'trainingApplicationApp.Specialdisastermanagement.PREPAREDNESS_PLANNING' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.educationLevel" for="field_educationLevel">Education Level</label>
+                    <select class="form-control" name="educationLevel" formControlName="educationLevel" id="field_educationLevel">
+                        <option value="PRIMARY">{{'trainingApplicationApp.Educationlevel.PRIMARY' | translate}}</option>
+                        <option value="SECONDARY">{{'trainingApplicationApp.Educationlevel.SECONDARY' | translate}}</option>
+                        <option value="TERTIARY">{{'trainingApplicationApp.Educationlevel.TERTIARY' | translate}}</option>
+                        <option value="VOCATIONAL">{{'trainingApplicationApp.Educationlevel.VOCATIONAL' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.trainer" for="field_trainer">Trainer</label>
+                    <select class="form-control" name="trainer" formControlName="trainer" id="field_trainer">
+                        <option value="YES">{{'trainingApplicationApp.Trainer.YES' | translate}}</option>
+                        <option value="NO">{{'trainingApplicationApp.Trainer.NO' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="trainingApplicationApp.participantEntry.comments" for="field_comments">Comments</label>
+                    <input type="text" class="form-control" name="comments" id="field_comments"
+                           formControlName="comments"/>
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="trainingApplicationApp.participantEntry.sessionCode" for="field_sessionCodes">Session Code</label>
+                    <select class="form-control" id="field_sessionCodes" multiple name="sessionCodes" formControlName="sessionCodes">
+                        <option [ngValue]="getSelected(editForm.get('sessionCodes')!.value, sessionOption)" *ngFor="let sessionOption of sessions; trackBy: trackById">{{sessionOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

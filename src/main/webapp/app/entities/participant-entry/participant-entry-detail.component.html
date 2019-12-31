@@ -1,0 +1,113 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="participantEntry">
+            <h2><span jhiTranslate="trainingApplicationApp.participantEntry.detail.title">Participant Entry</span> {{participantEntry.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.individualCode" [ngbTooltip]="'trainingApplicationApp.participantEntry.help.individualCode' | translate">Individual Code</span></dt>
+                <dd>
+                    <span>{{participantEntry.individualCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{participantEntry.firstName}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{participantEntry.lastName}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.country">Country</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'trainingApplicationApp.Country.' + participantEntry.country}}">{{participantEntry.country}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.gender">Gender</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'trainingApplicationApp.Gender.' + participantEntry.gender}}">{{participantEntry.gender}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.title">Title</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'trainingApplicationApp.Title.' + participantEntry.title}}">{{participantEntry.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.dateOfBirth">Date Of Birth</span></dt>
+                <dd>
+                    <span>{{participantEntry.dateOfBirth}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.organization">Organization</span></dt>
+                <dd>
+                    <span>{{participantEntry.organization}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.sector">Sector</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'trainingApplicationApp.Sector.' + participantEntry.sector}}">{{participantEntry.sector}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.position">Position</span></dt>
+                <dd>
+                    <span>{{participantEntry.position}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.contactAddress">Contact Address</span></dt>
+                <dd>
+                    <span>{{participantEntry.contactAddress}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.workPhone">Work Phone</span></dt>
+                <dd>
+                    <span>{{participantEntry.workPhone}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.faxNumber">Fax Number</span></dt>
+                <dd>
+                    <span>{{participantEntry.faxNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.homePhone">Home Phone</span></dt>
+                <dd>
+                    <span>{{participantEntry.homePhone}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.email">Email</span></dt>
+                <dd>
+                    <span>{{participantEntry.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.previousEmployment">Previous Employment</span></dt>
+                <dd>
+                    <span>{{participantEntry.previousEmployment}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.specialGeneral">Special General</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'trainingApplicationApp.Specialgeneral.' + participantEntry.specialGeneral}}">{{participantEntry.specialGeneral}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.specialDisasterManagement">Special Disaster Management</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'trainingApplicationApp.Specialdisastermanagement.' + participantEntry.specialDisasterManagement}}">{{participantEntry.specialDisasterManagement}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.educationLevel">Education Level</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'trainingApplicationApp.Educationlevel.' + participantEntry.educationLevel}}">{{participantEntry.educationLevel}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.trainer">Trainer</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'trainingApplicationApp.Trainer.' + participantEntry.trainer}}">{{participantEntry.trainer}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.comments">Comments</span></dt>
+                <dd>
+                    <span>{{participantEntry.comments}}</span>
+                </dd>
+                <dt><span jhiTranslate="trainingApplicationApp.participantEntry.sessionCode">Session Code</span></dt>
+                <dd>
+                    <span *ngFor="let sessionCode of participantEntry.sessionCodes; let last = last">
+                        <a [routerLink]="['/session', sessionCode?.id, 'view' ]">{{sessionCode.id}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/participant-entry', participantEntry.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

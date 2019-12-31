@@ -1,0 +1,36 @@
+{
+  "trainingApplicationApp": {
+    "session": {
+      "home": {
+        "title": "Sessions",
+        "createLabel": "Créer un nouveau Session",
+        "createOrEditLabel": "Créer ou éditer un Session",
+        "search": "Recherche pour Session",
+        "notFound": "Aucun Session trouvé"
+      },
+      "created": "Un nouveau Session a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Session avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Session avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Session {{ id }} ?"
+      },
+      "detail": {
+        "title": "Session"
+      },
+      "sessionCode": "Session Code",
+      "nameOfActivity": "Name Of Activity",
+      "location": "Location",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "attendeesNumber": "Attendees Number",
+      "sessionType": "Session Type",
+      "description": "Description",
+      "comment": "Comment",
+      "courseCode": "Course Code",
+      "individualCode": "Individual Code",
+      "help": {
+        "sessionCode": "fieldName"
+      }
+    }
+  }
+}
