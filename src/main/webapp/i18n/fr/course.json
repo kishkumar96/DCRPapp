@@ -1,0 +1,34 @@
+{
+  "trainingApplicationApp": {
+    "course": {
+      "home": {
+        "title": "Courses",
+        "createLabel": "Créer un nouveau Course",
+        "createOrEditLabel": "Créer ou éditer un Course",
+        "search": "Recherche pour Course",
+        "notFound": "Aucun Course trouvé"
+      },
+      "created": "Un nouveau Course a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Course avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Course avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Course {{ id }} ?"
+      },
+      "detail": {
+        "title": "Course"
+      },
+      "courseCode": "Course Code",
+      "courseTitle": "Course Title",
+      "method": "Method",
+      "duration": "Duration",
+      "period": "Period",
+      "description": "Description",
+      "comments": "Comments",
+      "session": "Session",
+      "projectCode": "Project Code",
+      "help": {
+        "courseCode": "fieldName"
+      }
+    }
+  }
+}

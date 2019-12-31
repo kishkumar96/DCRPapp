@@ -1,0 +1,11 @@
+{
+  "trainingApplicationApp": {
+    "Period": {
+      "null": "",
+      "HOURS": "HOURS",
+      "DAYS": "DAYS",
+      "WEEKS": "WEEKS",
+      "MONTHS": "MONTHS"
+    }
+  }
+}
