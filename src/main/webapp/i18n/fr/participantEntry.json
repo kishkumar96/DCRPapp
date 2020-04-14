@@ -1,0 +1,47 @@
+{
+  "trainingApplicationApp": {
+    "participantEntry": {
+      "home": {
+        "title": "ParticipantEntries",
+        "createLabel": "Créer un nouveau Participant Entry",
+        "createOrEditLabel": "Créer ou éditer un Participant Entry",
+        "search": "Recherche pour Participant Entry",
+        "notFound": "Aucun Participant Entry trouvé"
+      },
+      "created": "Un nouveau Participant Entry a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Participant Entry avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Participant Entry avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Participant Entry {{ id }} ?"
+      },
+      "detail": {
+        "title": "Participant Entry"
+      },
+      "individualCode": "Individual Code",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "country": "Country",
+      "gender": "Gender",
+      "title": "Title",
+      "dateOfBirth": "Date Of Birth",
+      "organization": "Organization",
+      "sector": "Sector",
+      "position": "Position",
+      "contactAddress": "Contact Address",
+      "workPhone": "Work Phone",
+      "faxNumber": "Fax Number",
+      "homePhone": "Home Phone",
+      "email": "Email",
+      "previousEmployment": "Previous Employment",
+      "specialGeneral": "Special General",
+      "specialDisasterManagement": "Special Disaster Management",
+      "educationLevel": "Education Level",
+      "trainer": "Trainer",
+      "comments": "Comments",
+      "sessionCode": "Session Code",
+      "help": {
+        "individualCode": "fieldName"
+      }
+    }
+  }
+}
